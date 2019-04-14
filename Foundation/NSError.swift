@@ -10,6 +10,11 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Darwin)
+import Darwin
+#elseif canImport(Glibc)
+import Glibc
+#endif
 
 import CoreFoundation
 
@@ -890,6 +895,7 @@ extension URLError {
 
 /// Describes an error in the POSIX error domain.
 public struct POSIXError : _BridgedStoredNSError {
+    
     public let _nsError: NSError
 
     public init(_nsError error: NSError) {
@@ -899,115 +905,21 @@ public struct POSIXError : _BridgedStoredNSError {
 
     public static var _nsErrorDomain: String { return NSPOSIXErrorDomain }
 
-    public enum Code : Int, _ErrorCodeProtocol {
+    public struct Code: Equatable, Hashable, RawRepresentable, _ErrorCodeProtocol {
         public typealias _ErrorType = POSIXError
-
-        case EPERM
-        case ENOENT
-        case ESRCH
-        case EINTR
-        case EIO
-        case ENXIO
-        case E2BIG
-        case ENOEXEC
-        case EBADF
-        case ECHILD
-        case EDEADLK
-        case ENOMEM
-        case EACCES
-        case EFAULT
-        case ENOTBLK
-        case EBUSY
-        case EEXIST
-        case EXDEV
-        case ENODEV
-        case ENOTDIR
-        case EISDIR
-        case EINVAL
-        case ENFILE
-        case EMFILE
-        case ENOTTY
-        case ETXTBSY
-        case EFBIG
-        case ENOSPC
-        case ESPIPE
-        case EROFS
-        case EMLINK
-        case EPIPE
-        case EDOM
-        case ERANGE
-        case EAGAIN
-        case EWOULDBLOCK
-        case EINPROGRESS
-        case EALREADY
-        case ENOTSOCK
-        case EDESTADDRREQ
-        case EMSGSIZE
-        case EPROTOTYPE
-        case ENOPROTOOPT
-        case EPROTONOSUPPORT
-        case ESOCKTNOSUPPORT
-        case ENOTSUP
-        case EPFNOSUPPORT
-        case EAFNOSUPPORT
-        case EADDRINUSE
-        case EADDRNOTAVAIL
-        case ENETDOWN
-        case ENETUNREACH
-        case ENETRESET
-        case ECONNABORTED
-        case ECONNRESET
-        case ENOBUFS
-        case EISCONN
-        case ENOTCONN
-        case ESHUTDOWN
-        case ETOOMANYREFS
-        case ETIMEDOUT
-        case ECONNREFUSED
-        case ELOOP
-        case ENAMETOOLONG
-        case EHOSTDOWN
-        case EHOSTUNREACH
-        case ENOTEMPTY
-        case EPROCLIM
-        case EUSERS
-        case EDQUOT
-        case ESTALE
-        case EREMOTE
-        case EBADRPC
-        case ERPCMISMATCH
-        case EPROGUNAVAIL
-        case EPROGMISMATCH
-        case EPROCUNAVAIL
-        case ENOLCK
-        case ENOSYS
-        case EFTYPE
-        case EAUTH
-        case ENEEDAUTH
-        case EPWROFF
-        case EDEVERR
-        case EOVERFLOW
-        case EBADEXEC
-        case EBADARCH
-        case ESHLIBVERS
-        case EBADMACHO
-        case ECANCELED
-        case EIDRM
-        case ENOMSG
-        case EILSEQ
-        case ENOATTR
-        case EBADMSG
-        case EMULTIHOP
-        case ENODATA
-        case ENOLINK
-        case ENOSR
-        case ENOSTR
-        case EPROTO
-        case ETIME
-        case ENOPOLICY
-        case ENOTRECOVERABLE
-        case EOWNERDEAD
-        case EQFULL
+        internal let errorCode: POSIXErrorCode
+        public var rawValue: Int {
+            return Int(errorCode.rawValue)
+        }
+        public init?(rawValue: Int) {
+            guard rawValue <= Int(Int32.max),
+                let errorCode = POSIXErrorCode(rawValue: Int32(rawValue))
+                else { return nil }
+            self.init(errorCode: errorCode)
+        }
+        internal init(errorCode: POSIXErrorCode) {
+            self.errorCode = errorCode
+        }
     }
 }
 
