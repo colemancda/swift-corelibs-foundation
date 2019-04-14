@@ -925,338 +925,338 @@ public struct POSIXError : _BridgedStoredNSError {
 
 extension POSIXError {
     /// Operation not permitted.
-    public static var EPERM: POSIXError.Code { return .EPERM }
+    public static var EPERM: POSIXError.Code { return Code(errorCode: .EPERM) }
 
     /// No such file or directory.
-    public static var ENOENT: POSIXError.Code { return .ENOENT }
+    public static var ENOENT: POSIXError.Code { return Code(errorCode: .ENOENT) }
 
     /// No such process.
-    public static var ESRCH: POSIXError.Code { return .ESRCH }
+    public static var ESRCH: POSIXError.Code { return Code(errorCode: .ESRCH) }
 
     /// Interrupted system call.
-    public static var EINTR: POSIXError.Code { return .EINTR }
+    public static var EINTR: POSIXError.Code { return Code(errorCode: .EINTR) }
 
     /// Input/output error.
-    public static var EIO: POSIXError.Code { return .EIO }
+    public static var EIO: POSIXError.Code { return Code(errorCode: .EIO) }
 
     /// Device not configured.
-    public static var ENXIO: POSIXError.Code { return .ENXIO }
+    public static var ENXIO: POSIXError.Code { return Code(errorCode: .ENXIO) }
 
     /// Argument list too long.
-    public static var E2BIG: POSIXError.Code { return .E2BIG }
+    public static var E2BIG: POSIXError.Code { return Code(errorCode: .E2BIG) }
 
     /// Exec format error.
-    public static var ENOEXEC: POSIXError.Code { return .ENOEXEC }
+    public static var ENOEXEC: POSIXError.Code { return Code(errorCode: .ENOEXEC) }
 
     /// Bad file descriptor.
-    public static var EBADF: POSIXError.Code { return .EBADF }
+    public static var EBADF: POSIXError.Code { return Code(errorCode: .EBADF) }
 
     /// No child processes.
-    public static var ECHILD: POSIXError.Code { return .ECHILD }
+    public static var ECHILD: POSIXError.Code { return Code(errorCode: .ECHILD) }
 
     /// Resource deadlock avoided.
-    public static var EDEADLK: POSIXError.Code { return .EDEADLK }
+    public static var EDEADLK: POSIXError.Code { return Code(errorCode: .EDEADLK) }
 
     /// Cannot allocate memory.
-    public static var ENOMEM: POSIXError.Code { return .ENOMEM }
+    public static var ENOMEM: POSIXError.Code { return Code(errorCode: .ENOMEM) }
 
     /// Permission denied.
-    public static var EACCES: POSIXError.Code { return .EACCES }
+    public static var EACCES: POSIXError.Code { return Code(errorCode: .EACCES) }
 
     /// Bad address.
-    public static var EFAULT: POSIXError.Code { return .EFAULT }
+    public static var EFAULT: POSIXError.Code { return Code(errorCode: .EFAULT) }
 
     /// Block device required.
-    public static var ENOTBLK: POSIXError.Code { return .ENOTBLK }
+    public static var ENOTBLK: POSIXError.Code { return Code(errorCode: .ENOTBLK) }
 
     /// Device / Resource busy.
-    public static var EBUSY: POSIXError.Code { return .EBUSY }
+    public static var EBUSY: POSIXError.Code { return Code(errorCode: .EBUSY) }
 
     /// File exists.
-    public static var EEXIST: POSIXError.Code { return .EEXIST }
+    public static var EEXIST: POSIXError.Code { return Code(errorCode: .EEXIST) }
 
     /// Cross-device link.
-    public static var EXDEV: POSIXError.Code { return .EXDEV }
+    public static var EXDEV: POSIXError.Code { return Code(errorCode: .EXDEV) }
 
     /// Operation not supported by device.
-    public static var ENODEV: POSIXError.Code { return .ENODEV }
+    public static var ENODEV: POSIXError.Code { return Code(errorCode: .ENODEV) }
 
     /// Not a directory.
-    public static var ENOTDIR: POSIXError.Code { return .ENOTDIR }
+    public static var ENOTDIR: POSIXError.Code { return Code(errorCode: .ENOTDIR) }
 
     /// Is a directory.
-    public static var EISDIR: POSIXError.Code { return .EISDIR }
+    public static var EISDIR: POSIXError.Code { return Code(errorCode: .EISDIR) }
 
     /// Invalid argument.
-    public static var EINVAL: POSIXError.Code { return .EINVAL }
+    public static var EINVAL: POSIXError.Code { return Code(errorCode: .EINVAL) }
 
     /// Too many open files in system.
-    public static var ENFILE: POSIXError.Code { return .ENFILE }
+    public static var ENFILE: POSIXError.Code { return Code(errorCode: .ENFILE) }
 
     /// Too many open files.
-    public static var EMFILE: POSIXError.Code { return .EMFILE }
+    public static var EMFILE: POSIXError.Code { return Code(errorCode: .EMFILE) }
 
     /// Inappropriate ioctl for device.
-    public static var ENOTTY: POSIXError.Code { return .ENOTTY }
+    public static var ENOTTY: POSIXError.Code { return Code(errorCode: .ENOTTY) }
 
     /// Text file busy.
-    public static var ETXTBSY: POSIXError.Code { return .ETXTBSY }
+    public static var ETXTBSY: POSIXError.Code { return Code(errorCode: .ETXTBSY) }
 
     /// File too large.
-    public static var EFBIG: POSIXError.Code { return .EFBIG }
+    public static var EFBIG: POSIXError.Code { return Code(errorCode: .EFBIG) }
 
     /// No space left on device.
-    public static var ENOSPC: POSIXError.Code { return .ENOSPC }
+    public static var ENOSPC: POSIXError.Code { return Code(errorCode: .ENOSPC) }
 
     /// Illegal seek.
-    public static var ESPIPE: POSIXError.Code { return .ESPIPE }
+    public static var ESPIPE: POSIXError.Code { return Code(errorCode: .ESPIPE) }
 
     /// Read-only file system.
-    public static var EROFS: POSIXError.Code { return .EROFS }
+    public static var EROFS: POSIXError.Code { return Code(errorCode: .EROFS) }
 
     /// Too many links.
-    public static var EMLINK: POSIXError.Code { return .EMLINK }
+    public static var EMLINK: POSIXError.Code { return Code(errorCode: .EMLINK) }
 
     /// Broken pipe.
-    public static var EPIPE: POSIXError.Code { return .EPIPE }
+    public static var EPIPE: POSIXError.Code { return Code(errorCode: .EPIPE) }
 
     /// Math Software
 
     /// Numerical argument out of domain.
-    public static var EDOM: POSIXError.Code { return .EDOM }
+    public static var EDOM: POSIXError.Code { return Code(errorCode: .EDOM) }
 
     /// Result too large.
-    public static var ERANGE: POSIXError.Code { return .ERANGE }
+    public static var ERANGE: POSIXError.Code { return Code(errorCode: .ERANGE) }
 
     /// Non-blocking and interrupt I/O.
 
     /// Resource temporarily unavailable.
-    public static var EAGAIN: POSIXError.Code { return .EAGAIN }
+    public static var EAGAIN: POSIXError.Code { return Code(errorCode: .EAGAIN) }
 
     /// Operation would block.
-    public static var EWOULDBLOCK: POSIXError.Code { return .EWOULDBLOCK }
+    public static var EWOULDBLOCK: POSIXError.Code { return Code(errorCode: .EWOULDBLOCK) }
 
     /// Operation now in progress.
-    public static var EINPROGRESS: POSIXError.Code { return .EINPROGRESS }
+    public static var EINPROGRESS: POSIXError.Code { return Code(errorCode: .EINPROGRESS) }
 
     /// Operation already in progress.
-    public static var EALREADY: POSIXError.Code { return .EALREADY }
+    public static var EALREADY: POSIXError.Code { return Code(errorCode: .EALREADY) }
 
     /// IPC/Network software -- argument errors.
 
     /// Socket operation on non-socket.
-    public static var ENOTSOCK: POSIXError.Code { return .ENOTSOCK }
+    public static var ENOTSOCK: POSIXError.Code { return Code(errorCode: .ENOTSOCK) }
 
     /// Destination address required.
-    public static var EDESTADDRREQ: POSIXError.Code { return .EDESTADDRREQ }
+    public static var EDESTADDRREQ: POSIXError.Code { return Code(errorCode: .EDESTADDRREQ) }
 
     /// Message too long.
-    public static var EMSGSIZE: POSIXError.Code { return .EMSGSIZE }
+    public static var EMSGSIZE: POSIXError.Code { return Code(errorCode: .EMSGSIZE) }
 
     /// Protocol wrong type for socket.
-    public static var EPROTOTYPE: POSIXError.Code { return .EPROTOTYPE }
+    public static var EPROTOTYPE: POSIXError.Code { return Code(errorCode: .EPROTOTYPE) }
 
     /// Protocol not available.
-    public static var ENOPROTOOPT: POSIXError.Code { return .ENOPROTOOPT }
+    public static var ENOPROTOOPT: POSIXError.Code { return Code(errorCode: .ENOPROTOOPT) }
 
     /// Protocol not supported.
-    public static var EPROTONOSUPPORT: POSIXError.Code { return .EPROTONOSUPPORT }
+    public static var EPROTONOSUPPORT: POSIXError.Code { return Code(errorCode: .EPROTONOSUPPORT) }
 
     /// Socket type not supported.
-    public static var ESOCKTNOSUPPORT: POSIXError.Code { return .ESOCKTNOSUPPORT }
+    public static var ESOCKTNOSUPPORT: POSIXError.Code { return Code(errorCode: .ESOCKTNOSUPPORT) }
 
     /// Operation not supported.
-    public static var ENOTSUP: POSIXError.Code { return .ENOTSUP }
+    public static var ENOTSUP: POSIXError.Code { return Code(errorCode: .ENOTSUP) }
 
     /// Protocol family not supported.
-    public static var EPFNOSUPPORT: POSIXError.Code { return .EPFNOSUPPORT }
+    public static var EPFNOSUPPORT: POSIXError.Code { return Code(errorCode: .EPFNOSUPPORT) }
 
     /// Address family not supported by protocol family.
-    public static var EAFNOSUPPORT: POSIXError.Code { return .EAFNOSUPPORT }
+    public static var EAFNOSUPPORT: POSIXError.Code { return Code(errorCode: .EAFNOSUPPORT) }
 
     /// Address already in use.
-    public static var EADDRINUSE: POSIXError.Code { return .EADDRINUSE }
+    public static var EADDRINUSE: POSIXError.Code { return Code(errorCode: .EADDRINUSE) }
 
     /// Can't assign requested address.
-    public static var EADDRNOTAVAIL: POSIXError.Code { return .EADDRNOTAVAIL }
+    public static var EADDRNOTAVAIL: POSIXError.Code { return Code(errorCode: .EADDRNOTAVAIL) }
 
     /// IPC/Network software -- operational errors
 
     /// Network is down.
-    public static var ENETDOWN: POSIXError.Code { return .ENETDOWN }
+    public static var ENETDOWN: POSIXError.Code { return Code(errorCode: .ENETDOWN) }
 
     /// Network is unreachable.
-    public static var ENETUNREACH: POSIXError.Code { return .ENETUNREACH }
+    public static var ENETUNREACH: POSIXError.Code { return Code(errorCode: .ENETUNREACH) }
 
     /// Network dropped connection on reset.
-    public static var ENETRESET: POSIXError.Code { return .ENETRESET }
+    public static var ENETRESET: POSIXError.Code { return Code(errorCode: .ENETRESET) }
 
     /// Software caused connection abort.
-    public static var ECONNABORTED: POSIXError.Code { return .ECONNABORTED }
+    public static var ECONNABORTED: POSIXError.Code { return Code(errorCode: .ECONNABORTED) }
 
     /// Connection reset by peer.
-    public static var ECONNRESET: POSIXError.Code { return .ECONNRESET }
+    public static var ECONNRESET: POSIXError.Code { return Code(errorCode: .ECONNRESET) }
 
     /// No buffer space available.
-    public static var ENOBUFS: POSIXError.Code { return .ENOBUFS }
+    public static var ENOBUFS: POSIXError.Code { return Code(errorCode: .ENOBUFS) }
 
     /// Socket is already connected.
-    public static var EISCONN: POSIXError.Code { return .EISCONN }
+    public static var EISCONN: POSIXError.Code { return Code(errorCode: .EISCONN) }
 
     /// Socket is not connected.
-    public static var ENOTCONN: POSIXError.Code { return .ENOTCONN }
+    public static var ENOTCONN: POSIXError.Code { return Code(errorCode: .ENOTCONN) }
 
     /// Can't send after socket shutdown.
-    public static var ESHUTDOWN: POSIXError.Code { return .ESHUTDOWN }
+    public static var ESHUTDOWN: POSIXError.Code { return Code(errorCode: .ESHUTDOWN) }
 
     /// Too many references: can't splice.
-    public static var ETOOMANYREFS: POSIXError.Code { return .ETOOMANYREFS }
+    public static var ETOOMANYREFS: POSIXError.Code { return Code(errorCode: .ETOOMANYREFS) }
 
     /// Operation timed out.
-    public static var ETIMEDOUT: POSIXError.Code { return .ETIMEDOUT }
+    public static var ETIMEDOUT: POSIXError.Code { return Code(errorCode: .ETIMEDOUT) }
 
     /// Connection refused.
-    public static var ECONNREFUSED: POSIXError.Code { return .ECONNREFUSED }
+    public static var ECONNREFUSED: POSIXError.Code { return Code(errorCode: .ECONNREFUSED) }
 
     /// Too many levels of symbolic links.
-    public static var ELOOP: POSIXError.Code { return .ELOOP }
+    public static var ELOOP: POSIXError.Code { return Code(errorCode: .ELOOP) }
 
     /// File name too long.
-    public static var ENAMETOOLONG: POSIXError.Code { return .ENAMETOOLONG }
+    public static var ENAMETOOLONG: POSIXError.Code { return Code(errorCode: .ENAMETOOLONG) }
 
     /// Host is down.
-    public static var EHOSTDOWN: POSIXError.Code { return .EHOSTDOWN }
+    public static var EHOSTDOWN: POSIXError.Code { return Code(errorCode: .EHOSTDOWN) }
 
     /// No route to host.
-    public static var EHOSTUNREACH: POSIXError.Code { return .EHOSTUNREACH }
+    public static var EHOSTUNREACH: POSIXError.Code { return Code(errorCode: .EHOSTUNREACH) }
 
     /// Directory not empty.
-    public static var ENOTEMPTY: POSIXError.Code { return .ENOTEMPTY }
+    public static var ENOTEMPTY: POSIXError.Code { return Code(errorCode: .ENOTEMPTY) }
 
     /// Quotas
 
     /// Too many processes.
-    public static var EPROCLIM: POSIXError.Code { return .EPROCLIM }
+    public static var EPROCLIM: POSIXError.Code { return Code(errorCode: .EPROCLIM) }
 
     /// Too many users.
-    public static var EUSERS: POSIXError.Code { return .EUSERS }
+    public static var EUSERS: POSIXError.Code { return Code(errorCode: .EUSERS) }
 
     /// Disk quota exceeded.
-    public static var EDQUOT: POSIXError.Code { return .EDQUOT }
+    public static var EDQUOT: POSIXError.Code { return Code(errorCode: .EDQUOT) }
 
     /// Network File System
 
     /// Stale NFS file handle.
-    public static var ESTALE: POSIXError.Code { return .ESTALE }
+    public static var ESTALE: POSIXError.Code { return Code(errorCode: .ESTALE) }
 
     /// Too many levels of remote in path.
-    public static var EREMOTE: POSIXError.Code { return .EREMOTE }
+    public static var EREMOTE: POSIXError.Code { return Code(errorCode: .EREMOTE) }
 
     /// RPC struct is bad.
-    public static var EBADRPC: POSIXError.Code { return .EBADRPC }
+    public static var EBADRPC: POSIXError.Code { return Code(errorCode: .EBADRPC) }
 
     /// RPC version wrong.
-    public static var ERPCMISMATCH: POSIXError.Code { return .ERPCMISMATCH }
+    public static var ERPCMISMATCH: POSIXError.Code { return Code(errorCode: .ERPCMISMATCH) }
 
     /// RPC prog. not avail.
-    public static var EPROGUNAVAIL: POSIXError.Code { return .EPROGUNAVAIL }
+    public static var EPROGUNAVAIL: POSIXError.Code { return Code(errorCode: .EPROGUNAVAIL) }
 
     /// Program version wrong.
-    public static var EPROGMISMATCH: POSIXError.Code { return .EPROGMISMATCH }
+    public static var EPROGMISMATCH: POSIXError.Code { return Code(errorCode: .EPROGMISMATCH) }
 
     /// Bad procedure for program.
-    public static var EPROCUNAVAIL: POSIXError.Code { return .EPROCUNAVAIL }
+    public static var EPROCUNAVAIL: POSIXError.Code { return Code(errorCode: .EPROCUNAVAIL) }
 
     /// No locks available.
-    public static var ENOLCK: POSIXError.Code { return .ENOLCK }
+    public static var ENOLCK: POSIXError.Code { return Code(errorCode: .ENOLCK) }
 
     /// Function not implemented.
-    public static var ENOSYS: POSIXError.Code { return .ENOSYS }
+    public static var ENOSYS: POSIXError.Code { return Code(errorCode: .ENOSYS) }
 
     /// Inappropriate file type or format.
-    public static var EFTYPE: POSIXError.Code { return .EFTYPE }
+    public static var EFTYPE: POSIXError.Code { return Code(errorCode: .EFTYPE) }
 
     /// Authentication error.
-    public static var EAUTH: POSIXError.Code { return .EAUTH }
+    public static var EAUTH: POSIXError.Code { return Code(errorCode: .EAUTH) }
 
     /// Need authenticator.
-    public static var ENEEDAUTH: POSIXError.Code { return .ENEEDAUTH }
+    public static var ENEEDAUTH: POSIXError.Code { return Code(errorCode: .ENEEDAUTH) }
 
     /// Intelligent device errors.
 
     /// Device power is off.
-    public static var EPWROFF: POSIXError.Code { return .EPWROFF }
+    public static var EPWROFF: POSIXError.Code { return Code(errorCode: .EPWROFF) }
 
     /// Device error, e.g. paper out.
-    public static var EDEVERR: POSIXError.Code { return .EDEVERR }
+    public static var EDEVERR: POSIXError.Code { return Code(errorCode: .EDEVERR) }
 
     /// Value too large to be stored in data type.
-    public static var EOVERFLOW: POSIXError.Code { return .EOVERFLOW }
+    public static var EOVERFLOW: POSIXError.Code { return Code(errorCode: .EOVERFLOW) }
 
     /// Program loading errors.
 
     /// Bad executable.
-    public static var EBADEXEC: POSIXError.Code { return .EBADEXEC }
+    public static var EBADEXEC: POSIXError.Code { return Code(errorCode: .EBADEXEC) }
 
     /// Bad CPU type in executable.
-    public static var EBADARCH: POSIXError.Code { return .EBADARCH }
+    public static var EBADARCH: POSIXError.Code { return Code(errorCode: .EBADARCH) }
 
     /// Shared library version mismatch.
-    public static var ESHLIBVERS: POSIXError.Code { return .ESHLIBVERS }
+    public static var ESHLIBVERS: POSIXError.Code { return Code(errorCode: .ESHLIBVERS) }
 
     /// Malformed Macho file.
-    public static var EBADMACHO: POSIXError.Code { return .EBADMACHO }
+    public static var EBADMACHO: POSIXError.Code { return Code(errorCode: .EBADMACHO) }
 
     /// Operation canceled.
-    public static var ECANCELED: POSIXError.Code { return .ECANCELED }
+    public static var ECANCELED: POSIXError.Code { return Code(errorCode: .ECANCELED) }
 
     /// Identifier removed.
-    public static var EIDRM: POSIXError.Code { return .EIDRM }
+    public static var EIDRM: POSIXError.Code { return Code(errorCode: .EIDRM) }
 
     /// No message of desired type.
-    public static var ENOMSG: POSIXError.Code { return .ENOMSG }
+    public static var ENOMSG: POSIXError.Code { return Code(errorCode: .ENOMSG) }
 
     /// Illegal byte sequence.
-    public static var EILSEQ: POSIXError.Code { return .EILSEQ }
+    public static var EILSEQ: POSIXError.Code { return Code(errorCode: .EILSEQ) }
 
     /// Attribute not found.
-    public static var ENOATTR: POSIXError.Code { return .ENOATTR }
+    public static var ENOATTR: POSIXError.Code { return Code(errorCode: .ENOATTR) }
 
     /// Bad message.
-    public static var EBADMSG: POSIXError.Code { return .EBADMSG }
+    public static var EBADMSG: POSIXError.Code { return Code(errorCode: .EBADMSG) }
 
     /// Reserved.
-    public static var EMULTIHOP: POSIXError.Code { return .EMULTIHOP }
+    public static var EMULTIHOP: POSIXError.Code { return Code(errorCode: .EMULTIHOP) }
 
     /// No message available on STREAM.
-    public static var ENODATA: POSIXError.Code { return .ENODATA }
+    public static var ENODATA: POSIXError.Code { return Code(errorCode: .ENODATA) }
 
     /// Reserved.
-    public static var ENOLINK: POSIXError.Code { return .ENOLINK }
+    public static var ENOLINK: POSIXError.Code { return Code(errorCode: .ENOLINK) }
 
     /// No STREAM resources.
-    public static var ENOSR: POSIXError.Code { return .ENOSR }
+    public static var ENOSR: POSIXError.Code { return Code(errorCode: .ENOSR) }
 
     /// Not a STREAM.
-    public static var ENOSTR: POSIXError.Code { return .ENOSTR }
+    public static var ENOSTR: POSIXError.Code { return Code(errorCode: .ENOSTR) }
 
     /// Protocol error.
-    public static var EPROTO: POSIXError.Code { return .EPROTO }
+    public static var EPROTO: POSIXError.Code { return Code(errorCode: .EPROTO) }
 
     /// STREAM ioctl timeout.
-    public static var ETIME: POSIXError.Code { return .ETIME }
+    public static var ETIME: POSIXError.Code { return Code(errorCode: .ETIME) }
 
     /// No such policy registered.
-    public static var ENOPOLICY: POSIXError.Code { return .ENOPOLICY }
+    public static var ENOPOLICY: POSIXError.Code { return Code(errorCode: .ENOPOLICY) }
 
     /// State not recoverable.
-    public static var ENOTRECOVERABLE: POSIXError.Code { return .ENOTRECOVERABLE }
+    public static var ENOTRECOVERABLE: POSIXError.Code { return Code(errorCode: .ENOTRECOVERABLE) }
 
     /// Previous owner died.
-    public static var EOWNERDEAD: POSIXError.Code { return .EOWNERDEAD }
+    public static var EOWNERDEAD: POSIXError.Code { return Code(errorCode: .EOWNERDEAD) }
 
     /// Interface output queue is full.
-    public static var EQFULL: POSIXError.Code { return .EQFULL }
+    public static var EQFULL: POSIXError.Code { return Code(errorCode: .EQFULL) }
 }
 
 enum UnknownNSError: Error {
