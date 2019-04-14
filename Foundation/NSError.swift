@@ -10,7 +10,10 @@
 //
 //===----------------------------------------------------------------------===//
 
-#if canImport(Darwin)
+#if canImport(MSVCRT)
+import MSVCRT
+import WinSDK
+#elseif canImport(Darwin)
 import Darwin
 #elseif canImport(Glibc)
 import Glibc
@@ -904,23 +907,12 @@ public struct POSIXError : _BridgedStoredNSError {
     }
 
     public static var _nsErrorDomain: String { return NSPOSIXErrorDomain }
+    
+    public typealias Code = POSIXErrorCode
+}
 
-    public struct Code: Equatable, Hashable, RawRepresentable, _ErrorCodeProtocol {
-        public typealias _ErrorType = POSIXError
-        internal let errorCode: POSIXErrorCode
-        public var rawValue: Int {
-            return Int(errorCode.rawValue)
-        }
-        public init?(rawValue: Int) {
-            guard rawValue <= Int(Int32.max),
-                let errorCode = POSIXErrorCode(rawValue: Int32(rawValue))
-                else { return nil }
-            self.init(errorCode: errorCode)
-        }
-        internal init(errorCode: POSIXErrorCode) {
-            self.errorCode = errorCode
-        }
-    }
+extension POSIXErrorCode: _ErrorCodeProtocol {
+    public typealias _ErrorType = POSIXError
 }
 
 extension POSIXError {
