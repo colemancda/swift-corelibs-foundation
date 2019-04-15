@@ -1350,8 +1350,10 @@ extension POSIXError {
     /// Socket type not supported.
     public static var ESOCKTNOSUPPORT: POSIXError.Code { return .ESOCKTNOSUPPORT }
 
+    #if canImport(Darwin)
     /// Operation not supported.
     public static var ENOTSUP: POSIXError.Code { return .ENOTSUP }
+    #endif
 
     /// Protocol family not supported.
     public static var EPFNOSUPPORT: POSIXError.Code { return .EPFNOSUPPORT }
@@ -1420,9 +1422,11 @@ extension POSIXError {
 
     /// Quotas
 
+    #if canImport(Darwin)
     /// Too many processes.
     public static var EPROCLIM: POSIXError.Code { return .EPROCLIM }
-
+    #endif
+    
     /// Too many users.
     public static var EUSERS: POSIXError.Code { return .EUSERS }
 
@@ -1437,6 +1441,7 @@ extension POSIXError {
     /// Too many levels of remote in path.
     public static var EREMOTE: POSIXError.Code { return .EREMOTE }
 
+    #if canImport(Darwin)
     /// RPC struct is bad.
     public static var EBADRPC: POSIXError.Code { return .EBADRPC }
 
@@ -1451,13 +1456,15 @@ extension POSIXError {
 
     /// Bad procedure for program.
     public static var EPROCUNAVAIL: POSIXError.Code { return .EPROCUNAVAIL }
-
+    #endif
+    
     /// No locks available.
     public static var ENOLCK: POSIXError.Code { return .ENOLCK }
 
     /// Function not implemented.
     public static var ENOSYS: POSIXError.Code { return .ENOSYS }
-
+    
+    #if canImport(Darwin)
     /// Inappropriate file type or format.
     public static var EFTYPE: POSIXError.Code { return .EFTYPE }
 
@@ -1466,32 +1473,39 @@ extension POSIXError {
 
     /// Need authenticator.
     public static var ENEEDAUTH: POSIXError.Code { return .ENEEDAUTH }
-
+    #endif
+    
     /// Intelligent device errors.
 
+    #if canImport(Darwin)
     /// Device power is off.
     public static var EPWROFF: POSIXError.Code { return .EPWROFF }
 
     /// Device error, e.g. paper out.
     public static var EDEVERR: POSIXError.Code { return .EDEVERR }
-
+    #endif
+    
     /// Value too large to be stored in data type.
     public static var EOVERFLOW: POSIXError.Code { return .EOVERFLOW }
 
     /// Program loading errors.
 
+    #if canImport(Darwin)
     /// Bad executable.
     public static var EBADEXEC: POSIXError.Code { return .EBADEXEC }
-
+    #endif
+    
+    #if canImport(Darwin)
     /// Bad CPU type in executable.
     public static var EBADARCH: POSIXError.Code { return .EBADARCH }
-
+    
     /// Shared library version mismatch.
     public static var ESHLIBVERS: POSIXError.Code { return .ESHLIBVERS }
 
     /// Malformed Macho file.
     public static var EBADMACHO: POSIXError.Code { return .EBADMACHO }
-
+    #endif
+    
     /// Operation canceled.
     public static var ECANCELED: POSIXError.Code { return .ECANCELED }
 
@@ -1504,8 +1518,10 @@ extension POSIXError {
     /// Illegal byte sequence.
     public static var EILSEQ: POSIXError.Code { return .EILSEQ }
 
+    #if canImport(Darwin)
     /// Attribute not found.
     public static var ENOATTR: POSIXError.Code { return .ENOATTR }
+    #endif
 
     /// Bad message.
     public static var EBADMSG: POSIXError.Code { return .EBADMSG }
@@ -1531,8 +1547,10 @@ extension POSIXError {
     /// STREAM ioctl timeout.
     public static var ETIME: POSIXError.Code { return .ETIME }
 
+    #if canImport(Darwin)
     /// No such policy registered.
     public static var ENOPOLICY: POSIXError.Code { return .ENOPOLICY }
+    #endif
 
     /// State not recoverable.
     public static var ENOTRECOVERABLE: POSIXError.Code { return .ENOTRECOVERABLE }
@@ -1540,8 +1558,10 @@ extension POSIXError {
     /// Previous owner died.
     public static var EOWNERDEAD: POSIXError.Code { return .EOWNERDEAD }
 
+    #if canImport(Darwin)
     /// Interface output queue is full.
     public static var EQFULL: POSIXError.Code { return .EQFULL }
+    #endif
 }
 
 enum UnknownNSError: Error {
