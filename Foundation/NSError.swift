@@ -14,6 +14,8 @@
 import Darwin
 #elseif canImport(Glibc)
 import Glibc
+#elseif canImport(MSVCRT)
+import MSVCRT
 #endif
 
 import CoreFoundation
